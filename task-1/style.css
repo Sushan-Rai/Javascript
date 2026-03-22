@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.entry-point{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#myInput{
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#addBtn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color:navajowhite;
+    cursor: pointer;
+}
+
+#myUL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+}
+
+#myUL li{
+    padding: 10px 20px;
+    text-align: left;
+    background-color: navajowhite;
+    border: 1px solid black;
+    width: 80%;
+}
+
+.statusbtn:checked li{
+    background-color: chartreuse;
+}
