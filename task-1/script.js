@@ -1,10 +1,11 @@
 let addButton = document.querySelector("#addBtn")
 let ul = document.getElementById("myUL")
 let tasks = []
-
+// tasks is used to record and keep track of the current tasks
 function renderTasks() {
+    // this function will be called multiple times so in order to not cause repitition we blank the ul
     ul.innerHTML = ""
-
+    // for each task we create a list item with its corresponding update, status and delete buttons
     tasks.forEach(task => {
         let listElement = document.createElement('li')
         listElement.dataset.id = task.id
@@ -45,7 +46,7 @@ function renderTasks() {
         listElement.appendChild(context)
         listElement.appendChild(div)
         ul.appendChild(listElement)
-
+        // We add add event listeners to initiate any chnages or button clicks
         statusBtn.addEventListener("change", () => {
             task.completed = statusBtn.checked
             renderTasks()
@@ -53,7 +54,7 @@ function renderTasks() {
 
         updateBtn.addEventListener("click", () => {
             let newValue = prompt("Update the task:", task.name)
-            if (newValue && newValue.trim() !== "") {
+            if (newValue !== "") {
                 task.name = newValue
                 renderTasks()
             }
@@ -65,7 +66,7 @@ function renderTasks() {
         })
     })
 }
-
+// add a task when the event listener captures a click 
 addButton.addEventListener("click", (e) => {
     e.preventDefault()
     let content = document.getElementById('myInput')
@@ -85,7 +86,7 @@ addButton.addEventListener("click", (e) => {
     content.value = ''
     renderTasks()
 })
-
+// sample task 
 tasks.push({
     id: Date.now(),
     name: 'workout',
