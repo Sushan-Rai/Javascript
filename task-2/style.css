@@ -1,0 +1,25 @@
+h1,h2{
+    text-align: center;
+}
+/* the calculator is aligned centered */
+.Calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+/* the div is centered */
+#myInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+/* the button style */
+button{
+    padding: 8px 10px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: 0px;
+}
