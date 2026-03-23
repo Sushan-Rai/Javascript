@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+/* body is flex and quiz is on top and slides are below */
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+/* Every slide occupies 100 percent of its space */
+.slides{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 35px;
+}
+/* The button styling and cursor to click is here */
+.options > button{
+    background-color: aquamarine;
+    padding: 4px 8px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    margin: 10px;
+}
+/* on hover we get a different color to indicate we might click it */
+.options > button:hover{
+    background-color: aqua;
+}
