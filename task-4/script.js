@@ -1,8 +1,9 @@
+// submit button to listen to the click event
 let submit = document.querySelector('#submit')
 
 submit.addEventListener('click', async (e) => {
     e.preventDefault()
-
+    // capture city and country values and divs that need to be populated with content
     let city = document.querySelector("#city")
     let country = document.querySelector("#country")
     let weather = document.querySelector(".weather")
@@ -11,15 +12,16 @@ submit.addEventListener('click', async (e) => {
     attrib.textContent = ""
 
     try {
+        // API fetch for city country
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value},${country.value}&APPID=${CONFIG.API_KEY}`)
 
         const data = await response.json()
-
+        // if the city and country is typed wrong or any other error
         if (!response.ok) {
             alert('Invalid: ' + data.message)
             return
         }
-
+        // populate the area with city country weather and description
         weather_data = data.weather[0]
         weatherContext = weather_data["main"]
         descriptionContext = weather_data["description"]
@@ -39,12 +41,13 @@ submit.addEventListener('click', async (e) => {
         weather.appendChild(textNode1)
         weather.appendChild(break_)
         weather.appendChild(textNode2)
-
+        // the other attributes such as temperature, humidity, pressure etc is recorded here
         attributes = data.main
         let i = 0;
         for (const key in attributes) {
             let element = undefined
             if (i < 4) {
+                // temp in kelvin is converted to celcius
                 let celciusTemp = Number(attributes[key]) - 273
                 let celc = celciusTemp.toFixed(2)
                 element = document.createElement('p')
@@ -60,9 +63,10 @@ submit.addEventListener('click', async (e) => {
         }
     }
     catch {
+        // network error
         alert("Network error: Please try again")
     }
-
+    // remove the city and country name
     city.value = ""
     country.value = ""
 })

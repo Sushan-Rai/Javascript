@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-
+/* centered the inputs */
 .input-city{
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
 #country{
     padding: 5px 10px;
 }
-
+/* styling the submit button with pointer */
 #submit{
     padding: 5px 10px;
     background-color: crimson;
@@ -25,7 +25,7 @@
     border-radius: 2px;
     cursor: pointer;
 }
-
+/* styling the API response */
 .main{
     background-color: crimson;
     border: 0px;
