@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+.input-city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#city{
+    padding: 5px 10px;
+}
+#country{
+    padding: 5px 10px;
+}
+
+#submit{
+    padding: 5px 10px;
+    background-color: crimson;
+    color: cornsilk;
+    border: 0px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.main{
+    background-color: crimson;
+    border: 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+    color: cornsilk;
+}
+
+.weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.attributes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
