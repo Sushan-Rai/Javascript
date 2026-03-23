@@ -1,0 +1,66 @@
+/* helps to box the entire html page into a place */
+*{
+    box-sizing: border-box;
+}
+/* width of the image is taken as 100% */
+img{
+    width: 100%;
+}
+/* column padding left and right */
+.column{
+    padding: 0px 8px;
+}
+/* all images are pointers to be clicked */
+.column > img{
+    cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* three images per column */
+.column{
+    float: left;
+    width: 33%;
+}
+/* the image is set to none and opacity to 0 then we set a transition and allow-discrete for display */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5s, display 0.5s allow-discrete;
+}
+/* modal content is placed inside the modal */
+.modal-content{
+    position: relative;
+    background-color: #fefefe;
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    max-width: 1200px;
+}
+/* close btn styling */
+.close{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 45px;
+}
+/* when the modal becomes active the transition takes place using the starting-style */
+.active{
+    display: block;
+    opacity: 1;
+    @starting-style{
+        opacity: 0;
+    }
+}

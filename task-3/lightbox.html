@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Image Gallery Lightbox for F1 -->
+    <title>Image Gallery lightbox</title>
+</head>
+<body>
+    <!-- centered header -->
+    <h1 style="text-align: center;">Image Gallery</h1>
+    <!-- row and column type of display each image is given a number for reference -->
+    <div class="row">
+        <div class="column">
+            <img src="lando.jpg" class="hover-shadow" id="1">
+        </div>
+        <div class="column">
+            <img src="mercedes.jpg" class="hover-shadow" id="2">
+        </div>
+        <div class="column">
+            <img src="race.jpg" class="hover-shadow" id="3">
+        </div>
+    </div>
+    <!-- This is the modal where the reference number will be used to display the particular image -->
+    <div class="modal" id="myModal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="lando.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="mercedes.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="race.jpg">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
