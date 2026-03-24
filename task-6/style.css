@@ -1,0 +1,25 @@
+/* this is the container with flex and flex direction of column */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+/* cursor of move is to indicate its draggable and width of 80 percent is to not take up the whole screen */
+.box{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border: 2px solid black;
+    border-radius: 3px;
+    cursor: move;
+}
+/* this is the condition where we drag over and it indicates it can be dropped there */
+.box.over{
+    border: 2px dotted grey;
+}
