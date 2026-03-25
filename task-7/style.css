@@ -1,0 +1,78 @@
+/* center chatContainer */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f1f1f1;
+}
+/* fixed size display flex and column wise */
+.chat-container{
+    width: 320px;
+    height: 450px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+/* header style */
+.chat-header{
+    background: #4a90e2;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+/* box overflow possible since it has fixed size */
+.chat-box{
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message{
+    margin: 6px 0;
+    padding: 8px 10px;
+    border-radius: 70%;
+    font-size: 14px;
+}
+/* user right */
+.user{
+    background: #d1e7ff;
+    align-self: flex-end;
+}
+/* bot left */
+.bot{
+    background: #eaeaea;
+    align-self: flex-start;
+}
+/* timestamp of every message */
+.timestamp{
+    font-size: 10px;
+    color: gray;
+    margin-top: 3px;
+    text-align: right;
+}
+/* input style */
+.input-area{
+    display: flex;
+    border: 1px solid #ddd;
+}
+
+.input-area input{
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.input-area button{
+    border: none;
+    background: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
