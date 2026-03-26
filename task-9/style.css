@@ -1,0 +1,12 @@
+/* initially loader is displayed to be block */
+#loader{
+    display: block;
+    text-align: center;
+}
+/* content is in flex and columnwise */
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
