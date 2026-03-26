@@ -1,0 +1,120 @@
+/* used background color */
+body {
+    box-sizing: border-box;
+    margin: 8px;
+    background-color: #802c6e;
+}
+/* used grid here of 2 columns and 3 rows */
+.page {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 5fr;
+    gap: 8px;
+}
+/* every div in page is shown to have this standard */
+.page div {
+    background-color: blanchedalmond;
+    border-radius: 12px;
+    padding: 8px;
+}
+/* header takes 2 columns and 1st row */
+.header {
+    grid-area: 1/1/2/3;
+    display: flex;
+}
+/* img is fixed size */
+.header img {
+    width: 100px;
+}
+/* center align */
+.header h1 {
+    text-align: center;
+    width: 100%;
+}
+/* should be seen above and 1st column 2nd row */
+.cart {
+    grid-area: 2/1/3/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* the content is 2nd column and 2nd row */
+.content {
+    grid-area: 2/2/3/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+}
+/* this is the footer and takes the whole 3rd row */
+.footer {
+    grid-area: 3/1/4/3;
+    text-align: center;
+}
+/* the product is the box shadow */
+.product {
+    border: 3px solid beige;
+    margin: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* add or remove items style */
+.cartAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.cartAdd button {
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+}
+/* dropdown */
+#categories {
+    padding: 8px;
+    background-color: beige;
+}
+
+/* reduce to two columns for the content */
+@media screen and (max-width:850px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* reduce to one column for page */
+@media screen and (max-width:700px) {
+    .page {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+    
+    .header{
+        grid-area: 1/1/2/2;
+    }
+
+    .cart{
+        grid-area: 2/1/3/2;
+    }
+
+    .content{
+        grid-area: 3/1/4/2;
+    }
+
+    .footer{
+        grid-area: 4/1/5/2;
+    }
+}
+/* remove header h1 and reduce to one column for content */
+@media screen and (max-width:550px){
+    .header h1{
+        display: none;
+    }
+
+    .content{
+        grid-template-columns: auto;
+    }
+}

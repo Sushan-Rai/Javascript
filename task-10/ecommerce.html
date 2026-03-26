@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ECommerce-App</title>
+</head>
+
+<body>
+    <!-- ecommerce page -->
+    <div class="page">
+        <!-- header -->
+        <div class="header">
+            <img src="logo.png" alt="">
+            <h1>ECommerce-App</h1>
+            <!-- filter -->
+            <div>
+                <h4>Select a category</h4>
+                <select id="categories">
+                    <option value="all">All</option>
+                </select>
+            </div>
+        </div>
+        <!-- cart contains the item purchase orders and total -->
+        <div class="cart">
+            <h2>Your Orders</h2>
+            <div class="orders">
+                <div id="GST">GST(9%): 0</div>
+                <div id="total">Total: 0</div>
+            </div>
+        </div>
+        <!-- content which has items -->
+        <div class="content" id="content"></div>
+        <!-- footer -->
+        <div class="footer">This is a fake Website</div>
+    </div>
+    <!-- type of module -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+10. **Full-featured eCommerce Shopping Cart**
+    - **Objective:** Build a comprehensive eCommerce simulation that includes product listings, a shopping cart, and dynamic price calculations.
+    - **Requirements:**
+        - **Product Listing:** Dynamically load and display product information (images, prices, descriptions) from a data source.
+        - **Shopping Cart:** Implement add-to-cart functionality, allowing users to adjust quantities and remove items.
+        - **State Management:** Use JavaScript to manage cart state and persist data using techniques like `localStorage`.
+        - **Price Calculations:** Dynamically compute totals, taxes, and discounts based on cart contents.
+        - **Product Filtering/Search:** Add features for filtering products by category or searching by keywords.
+        - **Responsive UI:** Ensure the interface adapts well to various screen sizes and devices.
+        - **Advanced Concepts:** Incorporate modular JavaScript (using ES6 modules), advanced error handling, and efficient DOM manipulation techniques.
+    - **E-Commerce App**
+        - Used dummyjson products api to render elements dynamically in grid format
+        - Implemented add to cart and remove to cart functionality for every item and used event delegation on the content
+        - used localStorage to save the transactions and total amount
+        - Added gst and discounts based on the prices apis and calculated the total amount
+        - added filters and called apis for the respective filters (Categories)
+        - Made the UI responsive for all sizes
+        - used export and module types to export functions from one js file to another
